@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Mum ❤️</title>
+
+<style>
+
+/* ===== COMMON THEME ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #803b5c;
+    background: linear-gradient(
+        135deg,
+        #ffe1ed,
+        #fff0f5,
+        #f8e5ff,
+        #ffe8f0
+    );
+    background-attachment: fixed;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    padding: 14px 8px;
+
+    background: rgba(255, 240, 247, 0.96);
+    border-bottom: 1px solid #ffc4da;
+    box-shadow: 0 4px 15px #d77da322;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a52e68;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    padding: 10px 13px;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #e84389;
+    color: white;
+}
+
+/* ===== ALL PAGE DESIGN ===== */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 15px;
+    scroll-margin-top: 70px;
+}
+
+.card {
+    width: 100%;
+    max-width: 850px;
+
+    padding: 40px 28px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.87);
+
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+
+    box-shadow: 0 15px 45px #c85a8b26;
+}
+
+h1 {
+    color: #e63883;
+    font-size: clamp(36px, 7vw, 58px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #d63384;
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #bd3977;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+.subtitle {
+    color: #b04d79;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+/* ===== PHOTO ===== */
+
+.photo {
+    width: min(280px, 85%);
+    height: 360px;
+
+    object-fit: cover;
+
+    border: 8px solid white;
+    border-radius: 180px 180px 25px 25px;
+
+    margin: 25px auto;
+
+    box-shadow: 0 10px 30px #d65c933b;
+}
+
+/* ===== SONG ===== */
+
+audio {
+    width: 100%;
+    max-width: 380px;
+    margin: 20px auto;
+}
+
+/* ===== BUTTONS ===== */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 25px;
+    margin: 10px 5px;
+
+    background: linear-gradient(
+        135deg,
+        #ff75a8,
+        #df3280
+    );
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 35px;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    box-shadow: 0 6px 18px #e8438940;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #e8438955;
+}
+
+/* ===== GAME CARDS ===== */
+
+.game {
+    background: #fff0f6;
+
+    border: 1px solid #ffc5db;
+    border-radius: 20px;
+
+    padding: 20px;
+    margin: 20px 0;
+
+    text-align: left;
+}
+
+details {
+    background: white;
+
+    padding: 17px;
+    margin: 13px 0;
+
+    border: 1px solid #f8c6d9;
+    border-radius: 15px;
+}
+
+summary {
+    cursor: pointer;
+
+    color: #bd3276;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.answer {
+    padding: 15px 5px 5px;
+
+    color: #87415e;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ===== LETTER ===== */
+
+.letter {
+    text-align: left;
+    font-size: 18px;
+    line-height: 2;
+    padding: 15px;
+}
+
+/* ===== HEART ===== */
+
+.heart {
+    font-size: 65px;
+    margin: 20px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #a13b6b;
+    font-size: 14px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media(max-width: 600px) {
+
+    nav {
+        gap: 2px;
+        padding: 10px 4px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 9px;
+    }
+
+    .card {
+        padding: 25px 16px;
+    }
+
+    .photo {
+        height: 320px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .letter {
+        font-size: 16px;
+    }
+
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#game1">Game 1</a>
+    <a href="#game2">Game 2</a>
+    <a href="#game3">Game 3</a>
+    <a href="#game4">Game 4</a>
+    <a href="#letter">Letter</a>
+    <a href="#proposal">Proposal</a>
+</nav>
+
+
+<!-- ===== PAGE 1: HOME ===== -->
+
+<section class="page" id="home">
+
+<div class="card">
+
+    <div class="subtitle">
+        A little surprise made with love
+    </div>
+
+    <h1>Hey My Mum! ❤️</h1>
+
+    <p>
+        Welcome to your little world of love.
+        I made something special just for you.
+    </p>
+
+    <img
+        src="photo.png"
+        alt="My beautiful girl"
+        class="photo"
+    >
+
+    <h2>My Beautiful Raima 💗</h2>
+
+    <p>
+        You are my favourite person,
+        my happiest thought,
+        and my sweetest feeling.
+    </p>
+
+    <!-- Background Music -->
+
+    <audio controls autoplay loop preload="auto">
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <p style="font-size:13px;">
+        🎵 Our special song. Press play if needed.
+    </p>
+
+    <a href="#game1" class="button">
+        Start Our Love Journey ❤️
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== PAGE 2: GAME 1 ===== -->
+
+<section class="page" id="game1">
+
+<div class="card">
+
+    <div class="subtitle">Game 01 · Love Quiz</div>
+
+    <h2>How Well Do You Know Me? 💞</h2>
+
+    <p>
+        Let's see how well you know your favourite boy!
+    </p>
+
+    <div class="game">
+
+        <details>
+            <summary>Who is my favourite person?</summary>
+
+            <div class="answer">
+                Obviously YOU, my Mum! ❤️
+            </div>
+        </details>
+
+        <details>
+            <summary>What makes me smile?</summary>
+
+            <div class="answer">
+                Your beautiful smile and your cute talks.
+            </div>
+        </details>
+
+        <details>
+            <summary>What do I want most?</summary>
+
+            <div class="answer">
+                More time, more memories and more love with you.
+            </div>
+        </details>
+
+    </div>
+
+    <a href="#game2" class="button">
+        Next Game →
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== PAGE 3: GAME 2 ===== -->
+
+<section class="page" id="game2">
+
+<div class="card">
+
+    <div class="subtitle">Game 02 · Secret Hearts</div>
+
+    <h2>Choose Your Lucky Heart 💗</h2>
+
+    <p>
+        Every heart has a secret message for you.
+    </p>
+
+    <div class="heart">💖</div>
+
+    <div class="game">
+
+        <details>
+            <summary>💗 Heart Number 1</summary>
+
+            <div class="answer">
+                You make my ordinary days extraordinary.
+            </div>
+        </details>
+
+        <details>
+            <summary>💖 Heart Number 2</summary>
+
+            <div class="answer">
+                Your smile is my favourite notification.
+            </div>
+        </details>
+
+        <details>
+            <summary>💘 Heart Number 3</summary>
+
+            <div class="answer">
+                I would choose you in every lifetime.
+            </div>
+        </details>
+
+    </div>
+
+    <a href="#game3" class="button">
+        Another Surprise →
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== PAGE 4: GAME 3 ===== -->
+
+<section class="page" id="game3">
+
+<div class="card">
+
+    <div class="subtitle">Game 03 · Secret Messages</div>
+
+    <h2>Three Secrets From My Heart 🥺</h2>
+
+    <p>
+        Open these little secrets.
+    </p>
+
+    <div class="game">
+
+        <details>
+            <summary>My favourite place?</summary>
+
+            <div class="answer">
+                Anywhere, as long as you are beside me.
+            </div>
+        </details>
+
+        <details>
+            <summary>My favourite sound?</summary>
+
+            <div class="answer">
+                Your voice. I could listen to it forever.
+            </div>
+        </details>
+
+        <details>
+            <summary>My favourite dream?</summary>
+
+            <div class="answer">
+                A beautiful future with you.
+            </div>
+        </details>
+
+    </div>
+
+    <a href="#game4" class="button">
+        Continue ❤️
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== PAGE 5: GAME 4 ===== -->
+
+<section class="page" id="game4">
+
+<div class="card">
+
+    <div class="subtitle">Game 04 · One Special Question</div>
+
+    <h2>How Much Do You Love Me? 💕</h2>
+
+    <p>
+        Choose your answer, Mum!
+    </p>
+
+    <div class="game">
+
+        <details>
+            <summary>A little bit? 🥺</summary>
+
+            <div class="answer">
+                Then I will give you a little more love every day.
+            </div>
+        </details>
+
+        <details>
+            <summary>A LOT? ❤️</summary>
+
+            <div class="answer">
+                But I still have unlimited love to give you!
+            </div>
+        </details>
+
+        <details>
+            <summary>INFINITE? 💍</summary>
+
+            <div class="answer">
+                That's exactly how much I love you too!
+            </div>
+        </details>
+
+    </div>
+
+    <a href="#letter" class="button">
+        Read My Love Letter 💌
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== PAGE 6: LOVE LETTER ===== -->
+
+<section class="page" id="letter">
+
+<div class="card">
+
+    <div class="subtitle">A letter from my heart</div>
+
+    <h2>For My Mum 💌</h2>
+
+    <div class="letter">
+
+        My Dearest Raima,
+
+        <br><br>
+
+        I don't know how to explain my feelings
+        perfectly in words.
+
+        But one thing I know is that you make
+        my world a much more beautiful place.
+
+        <br><br>
+
+        Your smile makes my difficult days better.
+        Your voice makes me happy.
+        And every little conversation with you
+        becomes a special memory.
+
+        <br><br>
+
+        I know we are not perfect.
+        Sometimes we may fight,
+        sometimes we may misunderstand each other.
+
+        But I never want to stop choosing you.
+
+        <br><br>
+
+        I want to support your dreams,
+        celebrate your happiness,
+        make you smile,
+        and stand beside you through every situation.
+
+        <br><br>
+
+        Thank you for coming into my life.
+
+        You are not just someone I love.
+        You are someone I want to keep loving,
+        every single day.
+
+        <br><br>
+
+        I LOVE YOU SO MUCH, MUM. ❤️
+
+        <br><br>
+
+        Forever Yours,
+
+        <br>
+
+        <strong>Aritra ❤️</strong>
+
+    </div>
+
+    <a href="#proposal" class="button">
+        The Final Surprise 💍
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== PAGE 7: FINAL PROPOSAL ===== -->
+
+<section class="page" id="proposal">
+
+<div class="card">
+
+    <div class="heart">💍</div>
+
+    <div class="subtitle">
+        The final surprise
+    </div>
+
+    <h1>One Last Question...</h1>
+
+    <h2>My Beautiful Raima ❤️</h2>
+
+    <p>
+        I don't know what the future holds,
+        but I know who I want beside me.
+    </p>
+
+    <p>
+        I want to laugh with you,
+        grow with you,
+        make memories with you,
+        and love you every single day.
+    </p>
+
+    <h2>
+        Will You Be Mine Forever? 🥺
+    </h2>
+
+    <details>
+        <summary class="button">
+            YES! I LOVE YOU ❤️
+        </summary>
+
+        <div class="answer">
+
+            <h2>YAYYYYY! 💗</h2>
+
+            You just made me the happiest person
+            in the entire world!
+
+            <br><br>
+
+            I LOVE YOU, MUM! ❤️
+
+        </div>
+    </details>
+
+    <a href="#letter" class="button">
+        Read My Letter Again 🥹
+    </a>
+
+    <p>
+        Made with endless love by Aritra.
+    </p>
+
+    <a href="#home" class="button">
+        Back To Beginning
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    Made With Endless Love ❤️
+
+    <br><br>
+
+    Aritra × Raima
+
+    <br>
+
+    Forever & Always 💗
+
+</footer>
+
+</body>
+</html>
